@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Domain Name Generator</title>
+</head>
+<body>
+    <h1>Random Domain Name Generator</h1>
+    <p>Generated Domain: <span id="generated-domain"></span></p>
+    <button onclick="generateRandomDomain()">Generate Random Domain</button>
+
+    <script>
+        function generateRandomDomain() {
+            const wordList = ["cool", "tech", "web", "domain", "genius", "code", "connect", "go", "plus", "hub"];
+            const randomWord1 = wordList[Math.floor(Math.random() * wordList.length)];
+            const randomWord2 = wordList[Math.floor(Math.random() * wordList.length)];
+            const randomTLD = [".com", ".net", ".org", ".io"][Math.floor(Math.random() * 4)];
+
+            const generatedDomain = randomWord1 + randomWord2 + randomTLD;
+            document.getElementById("generated-domain").textContent = generatedDomain;
+        }
+    </script>
+</body>
+</html>
